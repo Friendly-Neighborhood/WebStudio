@@ -1,0 +1,49 @@
+.clients {
+    @include section ();
+
+    @media screen and (min-width: 1200px) {
+            display: block;
+            @include section(94px, 94px);
+        }
+}
+.clients__title{
+    @extend %section-title;
+}
+
+.clients__list {
+    @extend %reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+     gap: 30px;
+    // flex-basis: calc((100% - 30px * 1) / 2);
+}
+
+.clients__icon {
+    fill: $IconsColor;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 92px;
+    border: 1px solid $SecondaryBorderColor;
+
+    @media screen and (min-width: 768px) {
+            width: 226px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+    
+    
+
+    @include transition-base (fill border);
+    
+    &:hover,
+    &:focus {
+            fill: $AccentColor;
+            border: 1px solid $AccentColor;
+            }
+}
+

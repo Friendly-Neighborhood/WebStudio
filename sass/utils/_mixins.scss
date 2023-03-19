@@ -1,0 +1,20 @@
+@mixin section($pt:60px, $pb:60px) {
+    padding-top:$pt;
+    padding-bottom:$pb;
+    }
+    
+
+@mixin transition-base($properties) {
+        transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      @if length($properties)>0 {
+        transition-property: $properties;
+    }
+  }
+
+  @mixin fonts($fs, $lh, $fw: 400, $ls: 0.03em) {
+      font-weight: $fw;
+      font-size: $fs;
+      line-height: decimal-round($lh / $fs);
+      letter-spacing: $ls;
+      
+  }

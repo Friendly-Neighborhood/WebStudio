@@ -1,0 +1,46 @@
+.logo {
+    @extend %reset-link;
+    display: block;
+    color: $TextColorDark;
+    font-family: $SecondaryFontFamily;
+    @include fonts(24px, 28px, 700);
+    
+    @media screen and (min-width: 1200px) {
+            @include fonts(26px, 31px, 700);}
+
+   
+    
+&__title {
+    color:$AccentColor;
+}
+}
+
+.header__logo {
+display: inline;
+padding-top: 16px;
+padding-bottom: 16px;   
+
+@media screen and (min-width: 768px) {
+    padding-top: 26px;
+    padding-bottom: 26px;
+    margin-right: 88px;
+    }
+
+ @media screen and (min-width: 1200px) {
+     padding-top: 24px;
+     padding-bottom: 25px;
+    margin-right: 93px;
+ }
+    
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+    padding: 0;
+    color: $MainColor;
+    text-align: center;
+
+    @media screen and (min-width: 1200px){
+        text-align: justify;
+    }
+}

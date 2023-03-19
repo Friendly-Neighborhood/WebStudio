@@ -1,0 +1,70 @@
+.nav{
+  @media screen and (max-width: 767px) {
+     display: none; }
+
+}
+
+.nav__list {
+    @extend %reset-list;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+      
+
+@media screen and (min-width: 768px) {
+      flex-direction: row;
+      gap: 50px;
+      
+   }
+
+  }
+
+  .nav__list{
+     margin-bottom: auto;
+      @media screen and (min-width: 768px){
+        margin-bottom: 0;
+      }
+      
+    }
+
+
+.nav__link {
+    @extend %reset-link;
+    position: relative;
+    display: block;
+   @include fonts(40px, 47px, 500, 0.02em);
+   color: $PraimaryTextColor;
+   @include transition-base (color);
+   
+    
+   @media screen and (min-width: 768px){
+   @include fonts(14px, 16px, 500, 0.02em);
+   padding-top: 32px;
+   padding-bottom: 32px;
+    }
+  
+  
+     &:hover,
+     &:focus {
+        color: $AccentColor;
+     }
+
+     &--current {
+        color: $AccentColor;
+     }
+
+     &--current::after {
+      @media screen and (min-width: 768px){
+        position: absolute;
+        bottom: -1px;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: $AccentColor;
+      }
+     }
+}
+
+   

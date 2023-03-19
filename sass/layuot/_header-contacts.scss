@@ -1,0 +1,58 @@
+.header-contacts {
+    @extend %reset-list;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (min-width: 768px) {
+           gap: 10px;
+           margin-left: auto;
+        }
+    
+     @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        gap: 30px;
+                 }
+     }
+
+    
+.header-contacts__item {
+    display: inline-flex;
+   
+}
+
+.header-contacts__link {
+    @media screen and (max-width: 767px) {
+            display: none;
+        }
+        
+    @extend %reset-link;
+    display: inline-flex;
+    align-items: center;
+
+    
+
+    color: $SecondaryTextColor;
+    @include fonts(14px, 16px, 500, 0.02em);
+    @include transition-base (color);
+   
+@media screen and (min-width: 1200px){
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+     &:hover,
+     &:focus {
+    color: $AccentColor;
+     }
+}
+
+.header-contacts__icon {
+    display: none;
+    @media screen and (min-width: 768px) {
+    fill: currentColor;
+        margin-right: 10px;
+        display: block;
+    
+        }
+          }
